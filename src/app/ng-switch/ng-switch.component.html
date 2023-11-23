@@ -1,0 +1,15 @@
+<h1>Ejemplos ngSwitch</h1>
+<b>Simple ngSwitch</b>
+<ul [ngSwitch]="user">
+  <li *ngSwitchCase="'Ramesh'">Hi Ramesh</li>
+  <li *ngSwitchCase="'Tony'">Hi Tony</li>
+  <li *ngSwitchCase="'Tom'">Hi Tom</li>
+  <li *ngSwitchDefault>No user found</li>
+  <b>ngSwitch y ngSwitchCase - Ejemplo números pares e impares</b>
+  <div *ngFor="let number of numbers">
+    <ul [ngSwitch]="number%2">
+      <li *ngSwitchCase="0">{{number}} -PAR</li>
+      <li *ngSwitchCase="1">{{number}} -IMPAR</li>
+    </ul>
+  </div>
+</ul>
